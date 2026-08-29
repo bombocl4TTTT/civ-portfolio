@@ -1,7 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const NAV_LINKS = [
   { label: 'The Dossier', href: '#about' },
@@ -52,42 +53,88 @@ export default function HeaderNav() {
           </a>
         </div>
 
-        {/* Mobile menu trigger */}
+        {/* Animated 3-Line Hamburger Button */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden p-2 text-[#1A1615] hover:text-[#C45B3A] transition-colors flex-shrink-0"
+          className="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 p-2 text-[#1A1615] hover:text-[#C45B3A] transition-colors flex-shrink-0 rounded-md focus:outline-none"
           aria-label="Toggle Menu"
         >
-          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {/* Top Line */}
+          <motion.span
+            animate={mobileOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="w-6 h-[2px] bg-[#1A1615] rounded-full origin-center"
+          />
+          {/* Middle Line */}
+          <motion.span
+            animate={mobileOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+            transition={{ duration: 0.2 }}
+            className="w-6 h-[2px] bg-[#1A1615] rounded-full origin-center"
+          />
+          {/* Bottom Line */}
+          <motion.span
+            animate={mobileOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="w-6 h-[2px] bg-[#1A1615] rounded-full origin-center"
+          />
         </button>
       </div>
 
-      {/* Mobile Drawer */}
-      {mobileOpen && (
-        <div className="lg:hidden bg-[#F4EFE6] border-b border-[#E5DCD2] px-6 py-6 animate-in slide-in-from-top duration-200">
-          <nav className="flex flex-col gap-4">
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="text-sm font-semibold tracking-wider uppercase text-[#1A1615] hover:text-[#C45B3A] py-1 border-b border-[#E5DCD2]/60"
+      {/* Mobile Drawer with Smooth Animation */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:hidden bg-[#F4EFE6] border-b border-[#E5DCD2] px-6 py-6 overflow-hidden"
+          >
+            <motion.nav
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={{
+                open: { transition: { staggerChildren: 0.05, delayChildren: 0.05 } },
+                closed: { transition: { staggerChildren: 0.03, staggerDirection: -1 } },
+              }}
+              className="flex flex-col gap-3"
+            >
+              {NAV_LINKS.map((link) => (
+                <motion.a
+                  key={link.label}
+                  href={link.href}
+                  variants={{
+                    open: { opacity: 1, x: 0 },
+                    closed: { opacity: 0, x: -10 },
+                  }}
+                  transition={{ duration: 0.25 }}
+                  onClick={() => setMobileOpen(false)}
+                  className="text-sm font-semibold tracking-wider uppercase text-[#1A1615] hover:text-[#C45B3A] py-2 border-b border-[#E5DCD2]/60 flex items-center justify-between"
+                >
+                  <span>{link.label}</span>
+                  <span className="text-[#C45B3A] text-xs">→</span>
+                </motion.a>
+              ))}
+              <motion.div
+                variants={{
+                  open: { opacity: 1, y: 0 },
+                  closed: { opacity: 0, y: 10 },
+                }}
+                className="pt-3 flex flex-col gap-2.5"
               >
-                {link.label}
-              </a>
-            ))}
-            <div className="pt-2 flex flex-col gap-2.5">
-              <a
-                href="#contact"
-                onClick={() => setMobileOpen(false)}
-                className="w-full text-center text-xs font-bold uppercase py-3 bg-[#1A1615] text-[#FBF8F3] rounded"
-              >
-                Book Discovery Call
-              </a>
-            </div>
-          </nav>
-        </div>
-      )}
+                <a
+                  href="#contact"
+                  onClick={() => setMobileOpen(false)}
+                  className="w-full text-center text-xs font-bold uppercase py-3.5 bg-[#1A1615] hover:bg-[#C45B3A] text-[#FBF8F3] rounded shadow-md transition-colors"
+                >
+                  Book Discovery Call
+                </a>
+              </motion.div>
+            </motion.nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
