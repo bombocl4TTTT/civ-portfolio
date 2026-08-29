@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Lanyard from './Lanyard';
 import CurvedLoop from './CurvedLoop';
+import { DoodleSparkle, DoodleStar, DoodleCurvedArrow, DoodleTwirlyArrow } from './Doodles/Doodles';
 
 const CAPABILITIES = [
   {
@@ -76,7 +77,7 @@ export default function AboutCollage() {
             <div className="w-3.5 h-10 sm:h-12 bg-[#1A1615] -mt-2 rounded-b-xs shadow-xs z-20 border-x border-stone-800"></div>
 
             {/* 3D Lanyard Canvas (Compact on Mobile - Zero Empty Space) */}
-            <div className="w-full h-[260px] sm:h-[400px] -mt-8 sm:-mt-10">
+            <div className="w-full h-[260px] sm:h-[400px] -mt-8 sm:-mt-10 relative">
               <Lanyard
                 position={[0, 0.4, 20]}
                 gravity={[0, -40, 0]}
@@ -88,6 +89,14 @@ export default function AboutCollage() {
                 lanyardWidth={1.3}
                 triggerBounce={isInView}
               />
+
+              {/* Cute Handwritten Note & Arrow beside Lanyard */}
+              <div className="hidden sm:flex items-center gap-1.5 absolute bottom-4 right-4 z-20 transform rotate-6 pointer-events-none">
+                <DoodleCurvedArrow width={28} height={20} color="#C45B3A" flipX />
+                <span className="font-handwriting text-base text-[#C45B3A] font-bold">
+                  grab &amp; swing me! 🏷️
+                </span>
+              </div>
             </div>
           </motion.div>
 

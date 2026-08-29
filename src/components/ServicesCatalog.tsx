@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { ArrowUpRight, CheckCircle2, Eye, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { DoodleSparkle, DoodleStar } from './Doodles/Doodles';
 
 interface ServiceSuite {
   id: string;
@@ -109,9 +110,14 @@ export default function ServicesCatalog() {
           className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 mb-12 border-b border-[#1A1615]/20"
         >
           <div>
-            <span className="text-xs font-mono-custom font-bold uppercase tracking-widest text-[#C45B3A] block mb-1">
-              SIGNATURE SERVICE SUITES
-            </span>
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-xs font-mono-custom font-bold uppercase tracking-widest text-[#C45B3A]">
+                SIGNATURE SERVICE SUITES
+              </span>
+              <span className="font-handwriting text-lg text-[#C45B3A] font-bold -rotate-2">
+                ✦ bespoke &amp; white-glove
+              </span>
+            </div>
             <h2 className="font-playfair text-3xl sm:text-5xl font-black text-[#1A1615] tracking-tight">
               Curated Capabilities. <span className="italic font-normal text-[#3D4A3E]">High-Leverage Execution.</span>
             </h2>

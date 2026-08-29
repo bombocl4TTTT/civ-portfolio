@@ -3,6 +3,13 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { ArrowRight, ArrowDownRight, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import {
+  DoodleSparkle,
+  DoodleStar,
+  DoodleTwirlyArrow,
+  DoodleCurvedArrow,
+  DoodlePaperPlane,
+} from './Doodles/Doodles';
 
 export default function HeroSection() {
   const [activeTab, setActiveTab] = useState<'overview' | 'quickFacts'>('overview');
@@ -21,19 +28,25 @@ export default function HeroSection() {
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-8 items-center min-h-[660px]">
           
           {/* Section 1: Editorial Headline & Manifesto (Always Top on Mobile / Left Column on Desktop) */}
-          <div className="lg:col-span-6 flex flex-col justify-between space-y-6 pt-2 sm:pt-0 w-full order-1">
+          <div className="lg:col-span-6 flex flex-col justify-between space-y-6 pt-2 sm:pt-0 w-full order-1 relative">
             
+            {/* Cute Flying Paper Plane Doodle */}
+            <div className="hidden sm:block absolute -top-4 right-12 z-20 pointer-events-none">
+              <DoodlePaperPlane size={56} color="#C45B3A" />
+            </div>
+
             {/* Main Headline */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="space-y-4"
+              className="space-y-4 relative"
             >
               <h1 className="font-playfair text-3xl sm:text-5xl xl:text-7xl font-black text-[#1A1615] leading-[1.08] tracking-tight">
                 The Digital <br />
                 <span className="font-serif italic font-normal text-[#C45B3A]">Operating System</span> <br />
                 For Visionaries.
+                <DoodleSparkle className="inline-block ml-2 text-[#C45B3A] animate-pulse" size={32} />
               </h1>
 
               {/* Hand-written / Editorial Subtitle */}
@@ -90,7 +103,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                className="flex flex-wrap items-center gap-4 pt-2"
+                className="flex flex-wrap items-center gap-4 pt-2 relative"
               >
                 <a
                   href="#contact"
@@ -107,6 +120,14 @@ export default function HeroSection() {
                   <span>EXPLORE SERVICES</span>
                   <ArrowDownRight className="w-4 h-4" />
                 </a>
+
+                {/* Cute Handwritten Note & Twirly Arrow */}
+                <div className="hidden sm:flex items-center gap-1.5 pl-2">
+                  <DoodleTwirlyArrow width={36} height={24} color="#C45B3A" />
+                  <span className="font-handwriting text-xl text-[#C45B3A] font-bold -rotate-3">
+                    let&apos;s build magic! ✦
+                  </span>
+                </div>
               </motion.div>
             </div>
 
@@ -154,6 +175,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.7, delay: 0.4 }}
                 className="absolute top-[34%] sm:top-[38%] -right-1 sm:-right-6 md:-right-10 z-20 w-[155px] sm:w-[210px] h-[84px] sm:h-[118px] hover:rotate-0 transition-transform duration-300 drop-shadow-xl overflow-hidden rounded-xl bg-[#282828]"
               >
+                {/* Cute Handwritten Note Above Spotify Player */}
                 <div className="w-[280px] h-[152px] origin-top-left scale-[0.55] sm:scale-[0.75]">
                   <iframe
                     data-testid="embed-iframe"
@@ -170,6 +192,14 @@ export default function HeroSection() {
                 </div>
               </motion.div>
 
+              {/* Cute Handwritten Label + Arrow for Spotify Player */}
+              <div className="hidden sm:flex items-center gap-1 absolute top-[30%] -right-8 z-30 transform rotate-6 pointer-events-none">
+                <span className="font-handwriting text-lg text-[#C45B3A] font-bold">
+                  on repeat 🎧
+                </span>
+                <DoodleCurvedArrow width={28} height={20} color="#C45B3A" />
+              </div>
+
               {/* Layer 5: Floating Polaroid Badge (Positioned below forearm in open space) */}
               <motion.div
                 initial={{ opacity: 0, x: -20, rotate: -8 }}
@@ -177,7 +207,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.7, delay: 0.5 }}
                 className="absolute top-[58%] sm:top-[60%] left-2 sm:left-6 md:left-8 z-20 hover:rotate-0 transition-transform duration-300"
               >
-                <div className="polaroid-frame max-w-[115px] sm:max-w-[145px] bg-white rounded shadow-xl p-1.5 sm:p-2">
+                <div className="polaroid-frame max-w-[115px] sm:max-w-[145px] bg-white rounded shadow-xl p-1.5 sm:p-2 relative">
                   <div className="relative w-full h-16 sm:h-20 bg-stone-100 rounded overflow-hidden mb-1.5 border border-stone-200">
                     <Image
                       src="/assets/collage/laptop-work.jpg"
@@ -191,6 +221,13 @@ export default function HeroSection() {
                   </div>
                   <div className="text-[7px] sm:text-[8px] font-mono-custom text-[#C45B3A] uppercase tracking-wider">
                     Notion • Asana • Slack
+                  </div>
+
+                  {/* Handwritten Mini Annotation */}
+                  <div className="absolute -bottom-5 left-0 transform -rotate-6 pointer-events-none whitespace-nowrap">
+                    <span className="font-handwriting text-sm text-[#3D4A3E] font-bold">
+                      systems + clarity ✨
+                    </span>
                   </div>
                 </div>
               </motion.div>

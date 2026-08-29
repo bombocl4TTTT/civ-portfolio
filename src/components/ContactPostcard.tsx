@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import { Send, CheckCircle2, Calendar, Mail, Clock, ShieldCheck, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { DoodlePaperPlane, DoodleSparkle, DoodleStar, DoodleTwirlyArrow } from './Doodles/Doodles';
 
 export default function ContactPostcard() {
   const [formData, setFormData] = useState({
@@ -93,6 +94,11 @@ export default function ContactPostcard() {
 
             {/* Top Right Postcard Stamp Box */}
             <div className="absolute top-6 right-6 hidden sm:flex flex-col items-center">
+              {/* Cute Paper Plane Flying into the Stamp Box */}
+              <div className="absolute -top-6 -left-12 pointer-events-none transform -rotate-12">
+                <DoodlePaperPlane size={44} color="#C45B3A" />
+              </div>
+
               <div
                 onClick={() => setSelectedStamp(selectedStamp === 'stamp-1' ? 'stamp-2' : 'stamp-1')}
                 className="w-20 h-24 border-2 border-dashed border-[#C45B3A] bg-[#F4EFE6] rounded p-1 flex flex-col items-center justify-between cursor-pointer hover:scale-105 transition-transform shadow-sm"
@@ -123,36 +129,37 @@ export default function ContactPostcard() {
                     onClick={() => setSubmitted(false)}
                     className="text-xs font-mono-custom font-bold uppercase text-[#C45B3A] underline underline-offset-4"
                   >
-                    Send Another Dispatch
+                    Send Another Dispatch →
                   </button>
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6 pt-4 sm:pt-0 sm:pr-24">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 pt-4 sm:pt-2">
                 
-                {/* Name & Email Row */}
+                {/* Name & Email */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-mono-custom font-bold uppercase text-[#1A1615] mb-1.5">
-                      Your Full Name *
+                      Your Name / Title *
                     </label>
                     <input
                       type="text"
                       required
-                      placeholder="e.g. Marcus Vance"
+                      placeholder="e.g. Alex Rivera, Founder"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full bg-[#F4EFE6] border border-[#D8CFC4] focus:border-[#1A1615] rounded-lg px-3.5 py-2.5 text-sm text-[#1A1615] placeholder-stone-400 focus:outline-none transition-colors"
                     />
                   </div>
+
                   <div>
                     <label className="block text-xs font-mono-custom font-bold uppercase text-[#1A1615] mb-1.5">
-                      Executive Email *
+                      Work Email *
                     </label>
                     <input
                       type="email"
                       required
-                      placeholder="marcus@company.com"
+                      placeholder="alex@studio.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full bg-[#F4EFE6] border border-[#D8CFC4] focus:border-[#1A1615] rounded-lg px-3.5 py-2.5 text-sm text-[#1A1615] placeholder-stone-400 focus:outline-none transition-colors"
@@ -160,11 +167,11 @@ export default function ContactPostcard() {
                   </div>
                 </div>
 
-                {/* Business Type & Need */}
+                {/* Business Type & Primary Need */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-mono-custom font-bold uppercase text-[#1A1615] mb-1.5">
-                      Business Type / Industry
+                      Company / Organization Type
                     </label>
                     <select
                       value={formData.businessType}
@@ -172,17 +179,17 @@ export default function ContactPostcard() {
                       className="w-full bg-[#F4EFE6] border border-[#D8CFC4] focus:border-[#1A1615] rounded-lg px-3.5 py-2.5 text-sm text-[#1A1615] focus:outline-none transition-colors cursor-pointer"
                     >
                       <option>SaaS / Tech Startup</option>
-                      <option>Creative / Design Agency</option>
-                      <option>DTC / E-Commerce Brand</option>
-                      <option>Creator / Digital Educator</option>
-                      <option>Venture Capital / Executive</option>
-                      <option>Other Boutique Business</option>
+                      <option>Creative Agency / Studio</option>
+                      <option>E-Commerce / Direct-to-Consumer</option>
+                      <option>Venture Capital / Investment Fund</option>
+                      <option>Solo Creator / Public Figure</option>
+                      <option>Boutique Consultancy</option>
                     </select>
                   </div>
 
                   <div>
                     <label className="block text-xs font-mono-custom font-bold uppercase text-[#1A1615] mb-1.5">
-                      Primary Strategic Need
+                      Primary Operational Focus
                     </label>
                     <select
                       value={formData.primaryNeed}
@@ -190,10 +197,10 @@ export default function ContactPostcard() {
                       className="w-full bg-[#F4EFE6] border border-[#D8CFC4] focus:border-[#1A1615] rounded-lg px-3.5 py-2.5 text-sm text-[#1A1615] focus:outline-none transition-colors cursor-pointer"
                     >
                       <option>Executive Calendar &amp; Inbox Control</option>
-                      <option>Notion Workspaces &amp; SOP Architecture</option>
-                      <option>Creative Direction &amp; Content Operations</option>
-                      <option>Product Launch &amp; VIP Concierge</option>
-                      <option>Full Executive Retainer (Combined)</option>
+                      <option>Notion Architecture &amp; SOP Engineering</option>
+                      <option>Creative Asset Production (Figma/Social)</option>
+                      <option>E-Commerce Ops &amp; Klaviyo Flow Buildout</option>
+                      <option>Comprehensive Fractional COO Retainer</option>
                     </select>
                   </div>
                 </div>
@@ -249,14 +256,24 @@ export default function ContactPostcard() {
                   ></textarea>
                 </div>
 
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  className="w-full py-4 bg-[#1A1615] text-[#FBF8F3] hover:bg-[#C45B3A] text-xs font-mono-custom font-bold uppercase tracking-widest rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group"
-                >
-                  <span>Dispatch Executive Inquiry</span>
-                  <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
+                {/* Submit Button & Cute Annotation */}
+                <div className="space-y-3 pt-1">
+                  <button
+                    type="submit"
+                    className="w-full py-4 bg-[#1A1615] text-[#FBF8F3] hover:bg-[#C45B3A] text-xs font-mono-custom font-bold uppercase tracking-widest rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group"
+                  >
+                    <span>Dispatch Executive Inquiry</span>
+                    <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+
+                  <div className="flex items-center justify-center gap-2 pt-1">
+                    <DoodleTwirlyArrow width={32} height={20} color="#C45B3A" />
+                    <span className="font-handwriting text-base text-[#C45B3A] font-bold">
+                      can&apos;t wait to connect! 💌
+                    </span>
+                    <DoodleSparkle size={14} color="#C45B3A" />
+                  </div>
+                </div>
               </form>
             )}
           </motion.div>
