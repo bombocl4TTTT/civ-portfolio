@@ -92,12 +92,13 @@ export default function ContactPostcard() {
               </div>
             </div>
 
+            {/* Cute Paper Plane Flying into Postcard (Visible on Mobile & Desktop) */}
+            <div className="absolute -top-6 right-4 sm:right-32 pointer-events-none transform -rotate-12 z-20">
+              <DoodlePaperPlane size={40} color="#C45B3A" />
+            </div>
+
             {/* Top Right Postcard Stamp Box */}
             <div className="absolute top-6 right-6 hidden sm:flex flex-col items-center">
-              {/* Cute Paper Plane Flying into the Stamp Box */}
-              <div className="absolute -top-6 -left-12 pointer-events-none transform -rotate-12">
-                <DoodlePaperPlane size={44} color="#C45B3A" />
-              </div>
 
               <div
                 onClick={() => setSelectedStamp(selectedStamp === 'stamp-1' ? 'stamp-2' : 'stamp-1')}
@@ -256,8 +257,8 @@ export default function ContactPostcard() {
                   ></textarea>
                 </div>
 
-                {/* Submit Button & Cute Annotation */}
-                <div className="space-y-3 pt-1">
+                {/* Submit Button */}
+                <div className="pt-1">
                   <button
                     type="submit"
                     className="w-full py-4 bg-[#1A1615] text-[#FBF8F3] hover:bg-[#C45B3A] text-xs font-mono-custom font-bold uppercase tracking-widest rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group"
@@ -265,14 +266,6 @@ export default function ContactPostcard() {
                     <span>Dispatch Executive Inquiry</span>
                     <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
-
-                  <div className="flex items-center justify-center gap-2 pt-1">
-                    <DoodleTwirlyArrow width={32} height={20} color="#C45B3A" />
-                    <span className="font-handwriting text-base text-[#C45B3A] font-bold">
-                      can&apos;t wait to connect! 💌
-                    </span>
-                    <DoodleSparkle size={14} color="#C45B3A" />
-                  </div>
                 </div>
               </form>
             )}

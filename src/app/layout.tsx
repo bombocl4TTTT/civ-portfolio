@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Plus_Jakarta_Sans, Space_Mono, Caveat, Cormorant_Garamond } from "next/font/google";
+import { Playfair_Display, Plus_Jakarta_Sans, Space_Mono, Caveat, Kalam, Patrick_Hand } from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
-  display: "swap",
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-cormorant",
   display: "swap",
 });
 
@@ -30,7 +23,22 @@ const spaceMono = Space_Mono({
 
 const caveat = Caveat({
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
   variable: "--font-caveat",
+  display: "swap",
+});
+
+const kalam = Kalam({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  variable: "--font-kalam",
+  display: "swap",
+});
+
+const patrickHand = Patrick_Hand({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-patrick",
   display: "swap",
 });
 
@@ -54,7 +62,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${cormorant.variable} ${jakarta.variable} ${spaceMono.variable} ${caveat.variable} scroll-smooth`}
+      className={`${playfair.variable} ${jakarta.variable} ${spaceMono.variable} ${caveat.variable} ${kalam.variable} ${patrickHand.variable} scroll-smooth`}
     >
       <body className="min-h-screen bg-[#FBF8F3] text-[#1A1615] font-sans antialiased selection:bg-[#C45B3A] selection:text-[#FFFFFF] overflow-x-hidden">
         {children}

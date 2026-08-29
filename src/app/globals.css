@@ -30,16 +30,20 @@ body {
   font-family: var(--font-playfair), Georgia, serif;
 }
 
-.font-cormorant {
-  font-family: var(--font-cormorant), Georgia, serif;
-}
-
 .font-mono-custom {
   font-family: var(--font-mono), monospace;
 }
 
 .font-handwriting {
   font-family: var(--font-caveat), cursive;
+}
+
+.font-kalam {
+  font-family: var(--font-kalam), cursive;
+}
+
+.font-casual {
+  font-family: var(--font-patrick), cursive;
 }
 
 /* Paper & Collage Utilities */

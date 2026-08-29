@@ -51,8 +51,8 @@ export default function AboutCollage() {
             </h2>
           </div>
           <div className="text-left sm:text-right pt-1 sm:pt-0">
-            <span className="font-serif italic text-base sm:text-xl text-[#3D4A3E] block">
-              Strategic Executive &amp; Creative Right Hand
+            <span className="font-handwriting text-2xl sm:text-3xl text-[#C45B3A] font-bold block -rotate-1">
+              Strategic Executive &amp; Creative Right Hand ✦
             </span>
           </div>
         </motion.div>
@@ -90,10 +90,10 @@ export default function AboutCollage() {
                 triggerBounce={isInView}
               />
 
-              {/* Cute Handwritten Note & Arrow beside Lanyard */}
-              <div className="hidden sm:flex items-center gap-1.5 absolute bottom-4 right-4 z-20 transform rotate-6 pointer-events-none">
-                <DoodleCurvedArrow width={28} height={20} color="#C45B3A" flipX />
-                <span className="font-handwriting text-base text-[#C45B3A] font-bold">
+              {/* Cute Handwritten Note & Arrow beside Lanyard (Visible on Mobile & Desktop) */}
+              <div className="flex items-center gap-1 absolute bottom-2 right-2 sm:bottom-4 sm:right-4 z-20 transform rotate-3 sm:rotate-6 pointer-events-none bg-[#FBF8F3]/90 sm:bg-transparent px-2 py-0.5 rounded shadow-xs sm:shadow-none border border-[#E5DCD2] sm:border-0">
+                <DoodleCurvedArrow width={24} height={16} color="#C45B3A" flipX />
+                <span className="font-handwriting text-sm sm:text-base text-[#C45B3A] font-bold">
                   grab &amp; swing me! 🏷️
                 </span>
               </div>

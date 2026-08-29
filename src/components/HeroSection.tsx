@@ -30,9 +30,9 @@ export default function HeroSection() {
           {/* Section 1: Editorial Headline & Manifesto (Always Top on Mobile / Left Column on Desktop) */}
           <div className="lg:col-span-6 flex flex-col justify-between space-y-6 pt-2 sm:pt-0 w-full order-1 relative">
             
-            {/* Cute Flying Paper Plane Doodle */}
-            <div className="hidden sm:block absolute -top-4 right-12 z-20 pointer-events-none">
-              <DoodlePaperPlane size={56} color="#C45B3A" />
+            {/* Cute Flying Paper Plane Doodle (Visible on Mobile & Desktop) */}
+            <div className="absolute -top-3 right-2 sm:-top-4 sm:right-12 z-20 pointer-events-none">
+              <DoodlePaperPlane size={42} color="#C45B3A" />
             </div>
 
             {/* Main Headline */}
@@ -44,18 +44,18 @@ export default function HeroSection() {
             >
               <h1 className="font-playfair text-3xl sm:text-5xl xl:text-7xl font-black text-[#1A1615] leading-[1.08] tracking-tight">
                 The Digital <br />
-                <span className="font-serif italic font-normal text-[#C45B3A]">Operating System</span> <br />
+                <span className="font-handwriting text-4xl sm:text-6xl xl:text-8xl text-[#C45B3A] font-bold block sm:inline">Operating System</span> <br className="hidden sm:inline" />
                 For Visionaries.
-                <DoodleSparkle className="inline-block ml-2 text-[#C45B3A] animate-pulse" size={32} />
+                <DoodleSparkle className="inline-block ml-1 sm:ml-2 text-[#C45B3A] animate-pulse" size={28} />
               </h1>
 
-              {/* Hand-written / Editorial Subtitle */}
-              <div className="border-l-2 border-[#C45B3A] pl-3 sm:pl-4 py-1">
-                <p className="font-serif italic text-base sm:text-xl text-[#3D4A3E] font-medium leading-snug">
+              {/* Hand-written Graphic Artist Editorial Quote */}
+              <div className="border-l-3 border-[#C45B3A] pl-3 sm:pl-4 py-1 bg-[#F4EFE6]/50 rounded-r-lg">
+                <p className="font-handwriting text-xl sm:text-3xl text-[#1A1615] font-bold leading-tight">
                   &ldquo;Transforming executive chaos into calm clarity, seamless Notion architectures, and elevated brand execution.&rdquo;
                 </p>
                 <span className="text-[10px] sm:text-[11px] font-mono-custom text-[#756D63] block mt-1 uppercase tracking-wider">
-                  — CIVREL MARLYNETTE FETALINO
+                  — CIVREL MARLYNETTE FETALINO ✦ GRAPHIC ARTIST &amp; VA
                 </span>
               </div>
             </motion.div>
@@ -66,7 +66,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-                className="text-sm sm:text-base text-[#524B43] leading-relaxed max-w-xl"
+                className="text-sm sm:text-base text-[#524B43] leading-relaxed max-w-xl font-medium"
               >
                 I partner with high-growth founders, creative directors, and boutique agencies as a strategic right hand. From high-stakes calendar mastery and automated Notion workspaces to creative content production and product launches.
               </motion.p>
@@ -122,9 +122,9 @@ export default function HeroSection() {
                 </a>
 
                 {/* Cute Handwritten Note & Twirly Arrow */}
-                <div className="hidden sm:flex items-center gap-1.5 pl-2">
+                <div className="flex items-center gap-1.5 pl-2">
                   <DoodleTwirlyArrow width={36} height={24} color="#C45B3A" />
-                  <span className="font-handwriting text-xl text-[#C45B3A] font-bold -rotate-3">
+                  <span className="font-handwriting text-2xl text-[#C45B3A] font-bold -rotate-3">
                     let&apos;s build magic! ✦
                   </span>
                 </div>
@@ -175,7 +175,6 @@ export default function HeroSection() {
                 transition={{ duration: 0.7, delay: 0.4 }}
                 className="absolute top-[34%] sm:top-[38%] -right-1 sm:-right-6 md:-right-10 z-20 w-[155px] sm:w-[210px] h-[84px] sm:h-[118px] hover:rotate-0 transition-transform duration-300 drop-shadow-xl overflow-hidden rounded-xl bg-[#282828]"
               >
-                {/* Cute Handwritten Note Above Spotify Player */}
                 <div className="w-[280px] h-[152px] origin-top-left scale-[0.55] sm:scale-[0.75]">
                   <iframe
                     data-testid="embed-iframe"
@@ -192,12 +191,12 @@ export default function HeroSection() {
                 </div>
               </motion.div>
 
-              {/* Cute Handwritten Label + Arrow for Spotify Player */}
-              <div className="hidden sm:flex items-center gap-1 absolute top-[30%] -right-8 z-30 transform rotate-6 pointer-events-none">
-                <span className="font-handwriting text-lg text-[#C45B3A] font-bold">
+              {/* Cute Handwritten Label + Arrow for Spotify Player (Visible on Mobile & Desktop) */}
+              <div className="flex items-center gap-1 absolute -top-5 right-2 sm:top-[28%] sm:-right-10 z-30 transform rotate-3 sm:rotate-6 pointer-events-none bg-[#FBF8F3]/90 sm:bg-transparent px-2 py-0.5 rounded shadow-xs sm:shadow-none border border-[#E5DCD2] sm:border-0">
+                <span className="font-handwriting text-base sm:text-xl text-[#C45B3A] font-bold">
                   on repeat 🎧
                 </span>
-                <DoodleCurvedArrow width={28} height={20} color="#C45B3A" />
+                <DoodleCurvedArrow width={24} height={18} color="#C45B3A" />
               </div>
 
               {/* Layer 5: Floating Polaroid Badge (Positioned below forearm in open space) */}
@@ -223,9 +222,9 @@ export default function HeroSection() {
                     Notion • Asana • Slack
                   </div>
 
-                  {/* Handwritten Mini Annotation */}
-                  <div className="absolute -bottom-5 left-0 transform -rotate-6 pointer-events-none whitespace-nowrap">
-                    <span className="font-handwriting text-sm text-[#3D4A3E] font-bold">
+                  {/* Handwritten Mini Annotation (Visible on Mobile & Desktop) */}
+                  <div className="absolute -bottom-5 left-0 transform -rotate-6 pointer-events-none whitespace-nowrap bg-[#FBF8F3]/90 sm:bg-transparent px-1.5 py-0.5 rounded shadow-xs sm:shadow-none border border-[#E5DCD2] sm:border-0">
+                    <span className="font-handwriting text-sm sm:text-base text-[#1A1615] font-bold">
                       systems + clarity ✨
                     </span>
                   </div>

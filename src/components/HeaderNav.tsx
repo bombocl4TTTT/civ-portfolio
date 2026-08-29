@@ -24,8 +24,8 @@ export default function HeaderNav() {
           <span className="font-playfair font-black text-xl sm:text-2xl tracking-tight text-[#1A1615] group-hover:text-[#C45B3A] transition-colors">
             CIVREL MARLYNETTE
           </span>
-          <span className="font-mono-custom text-[10px] tracking-[0.25em] uppercase text-[#8C8275]">
-            Executive &amp; Creative VA
+          <span className="font-handwriting text-sm tracking-wide text-[#C45B3A] font-bold -mt-0.5">
+            Executive &amp; Creative VA ✦
           </span>
         </Link>
 
