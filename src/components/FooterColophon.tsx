@@ -97,7 +97,7 @@ export default function FooterColophon() {
             </div>
             <div className="pt-2">
               <span className="text-[10px] text-stone-500 block">
-                TYPOGRAPHY: Playfair Display, Cormorant Garamond, Plus Jakarta Sans &amp; Space Mono.
+                TYPOGRAPHY: Shantell Sans, Patrick Hand, Plus Jakarta Sans &amp; Space Mono.
               </span>
             </div>
           </div>

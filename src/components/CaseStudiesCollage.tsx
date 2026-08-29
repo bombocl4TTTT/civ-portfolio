@@ -103,7 +103,7 @@ export default function CaseStudiesCollage() {
               </span>
             </div>
             <h2 className="font-playfair text-3xl sm:text-5xl font-black text-[#1A1615] tracking-tight">
-              Measurable Outcomes. <span className="italic font-normal text-[#3D4A3E]">Proven Track Record.</span>
+              Measurable Outcomes. <span className="text-[#C45B3A]">Proven Track Record.</span>
             </h2>
           </div>
           <div className="text-right">

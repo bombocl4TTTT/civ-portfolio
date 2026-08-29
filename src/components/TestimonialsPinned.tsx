@@ -44,11 +44,16 @@ export default function TestimonialsPinned() {
           className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 mb-12 border-b border-[#1A1615]/20"
         >
           <div>
-            <span className="text-xs font-mono-custom font-bold uppercase tracking-widest text-[#C45B3A] block mb-1">
-              CLIENT TESTIMONIALS
-            </span>
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-xs font-mono-custom font-bold uppercase tracking-widest text-[#C45B3A]">
+                CLIENT TESTIMONIALS
+              </span>
+              <span className="font-handwriting text-lg text-[#C45B3A] font-bold -rotate-2">
+                ✦ genuine client praise 💌
+              </span>
+            </div>
             <h2 className="font-playfair text-3xl sm:text-5xl font-black text-[#1A1615] tracking-tight">
-              Trusted by Founders. <span className="italic font-normal text-[#3D4A3E]">Praised by Visionaries.</span>
+              Trusted by Founders. <span className="text-[#C45B3A]">Praised by Visionaries.</span>
             </h2>
           </div>
           <div className="text-right">
@@ -67,7 +72,7 @@ export default function TestimonialsPinned() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-30px' }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="space-y-4"
+              className="space-y-4 bg-white/60 p-6 rounded-2xl border border-[#E5DCD2] shadow-sm"
             >
               {/* 5 Stars */}
               <div className="flex items-center gap-1 text-[#D4AF37]">
@@ -76,8 +81,8 @@ export default function TestimonialsPinned() {
                 ))}
               </div>
 
-              {/* Quote */}
-              <p className="font-serif italic text-lg sm:text-xl text-[#1A1615] leading-relaxed">
+              {/* Quote in Upright Fun Handwriting */}
+              <p className="font-handwriting text-xl sm:text-2xl text-[#1A1615] leading-snug font-bold">
                 &ldquo;{rev.quote}&rdquo;
               </p>
 

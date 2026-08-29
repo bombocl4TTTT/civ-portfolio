@@ -66,8 +66,11 @@ export default function ContactPostcard() {
           <span className="text-xs font-mono-custom font-bold uppercase tracking-widest text-[#C45B3A] block mb-1">
             START A CONVERSATION
           </span>
+          <span className="font-handwriting text-xl text-[#C45B3A] font-bold block mb-1">
+            ✦ let&apos;s build something great together ✨
+          </span>
           <h2 className="font-playfair text-3xl sm:text-5xl font-black text-[#1A1615] tracking-tight mb-2">
-            Request an Executive <span className="italic font-normal text-[#3D4A3E]">Discovery Briefing.</span>
+            Request an Executive <span className="text-[#C45B3A]">Discovery Briefing.</span>
           </h2>
           <p className="text-xs sm:text-sm text-[#524B43] max-w-lg mx-auto">
             Share your operational bottlenecks below. I will respond within 24 business hours.

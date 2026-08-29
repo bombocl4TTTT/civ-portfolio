@@ -43,11 +43,16 @@ export default function WorkflowTimeline() {
           className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 mb-12 border-b border-[#1A1615]/20"
         >
           <div>
-            <span className="text-xs font-mono-custom font-bold uppercase tracking-widest text-[#C45B3A] block mb-1">
-              COLLABORATION PROTOCOL
-            </span>
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-xs font-mono-custom font-bold uppercase tracking-widest text-[#C45B3A]">
+                COLLABORATION PROTOCOL
+              </span>
+              <span className="font-handwriting text-lg text-[#C45B3A] font-bold -rotate-2">
+                ✦ simple &amp; seamless ⚡
+              </span>
+            </div>
             <h2 className="font-playfair text-3xl sm:text-5xl font-black text-[#1A1615] tracking-tight">
-              Frictionless Onboarding. <span className="italic font-normal text-[#3D4A3E]">Asynchronous Precision.</span>
+              Frictionless Onboarding. <span className="text-[#C45B3A]">Asynchronous Precision.</span>
             </h2>
           </div>
           <div className="text-right">

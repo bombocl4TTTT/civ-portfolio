@@ -119,7 +119,7 @@ export default function ServicesCatalog() {
               </span>
             </div>
             <h2 className="font-playfair text-3xl sm:text-5xl font-black text-[#1A1615] tracking-tight">
-              Curated Capabilities. <span className="italic font-normal text-[#3D4A3E]">High-Leverage Execution.</span>
+              Curated Capabilities. <span className="text-[#C45B3A]">High-Leverage Execution.</span>
             </h2>
           </div>
           <div className="text-right">

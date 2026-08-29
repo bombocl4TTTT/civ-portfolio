@@ -25,25 +25,25 @@ body {
   background-size: 24px 24px;
 }
 
-/* Typography Helpers */
-.font-playfair {
-  font-family: var(--font-playfair), Georgia, serif;
+/* Typography Helpers - Fun, Upright Graphic Artist Handwriting */
+.font-playfair,
+.font-heading,
+.font-title {
+  font-family: var(--font-shantell), var(--font-patrick), cursive, sans-serif;
 }
 
 .font-mono-custom {
   font-family: var(--font-mono), monospace;
 }
 
-.font-handwriting {
-  font-family: var(--font-caveat), cursive;
+.font-handwriting,
+.font-fun,
+.font-artist {
+  font-family: var(--font-patrick), var(--font-shantell), cursive, sans-serif;
 }
 
-.font-kalam {
-  font-family: var(--font-kalam), cursive;
-}
-
-.font-casual {
-  font-family: var(--font-patrick), cursive;
+.font-shantell {
+  font-family: var(--font-shantell), cursive, sans-serif;
 }
 
 /* Paper & Collage Utilities */
