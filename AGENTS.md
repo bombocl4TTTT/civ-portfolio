@@ -1,29 +1,9 @@
-# AGENTS.md
+<!-- BEGIN:nextjs-agent-rules -->
 
-## Project
-Editorial-style single-page portfolio for a model/creative, built as
-static HTML/CSS. Two real photos already exist in this folder:
-- headshot.jpg  (professional 1x1)
-- fullbody.png  (full body)
-Reference these images directly with <img> — never regenerate, upscale,
-relight, retouch, or run any image model on them. Their pixels must
-stay byte-identical to the source files.
+# This is NOT the Next.js you know
 
-## Layout
-Two-column magazine grid, generous negative space, asymmetric (not
-centered/symmetric). Headshot large, off-center. Full-body smaller,
-anchored bottom or side corner. Thin horizontal rule between sections.
-Name in large tracked-out serif. Title/stats in smaller clean sans-serif.
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
 
-## Type & color
-Google Fonts: "Fraunces" for display/name, "Inter" for body/labels.
-Neutral base (off-white/warm grey/black). One accent color sampled
-from tones actually present in the two photos — no purple/teal AI
-gradient defaults. Subtle paper/print texture is fine; no glossy
-3D sheen, glow, or lens-flare effects.
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
-## Hard rules
-- No placeholder/lorem ipsum text — ask me for real copy if missing.
-- No fake logos, badges, or watermark text.
-- No generic gradient-mesh or bokeh backgrounds, no decorative filler shapes.
-- After every change, tell me what to check in the browser before continuing.
+<!-- END:nextjs-agent-rules -->
