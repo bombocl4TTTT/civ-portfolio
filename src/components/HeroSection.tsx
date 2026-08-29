@@ -147,14 +147,14 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              {/* Layer 4: Spotify Track Card (Right side) */}
+              {/* Layer 4: Spotify Track Card (Compact & Perfectly Sized - Zero Empty Space) */}
               <motion.div
                 initial={{ opacity: 0, x: 20, rotate: 3 }}
                 animate={{ opacity: 1, x: 0, rotate: 1 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
-                className="absolute top-[38%] sm:top-[40%] -right-2 sm:-right-6 md:-right-12 z-20 w-[185px] sm:w-[220px] hover:rotate-0 transition-transform duration-300 drop-shadow-xl overflow-hidden rounded-xl bg-[#282828]"
+                className="absolute top-[34%] sm:top-[38%] -right-1 sm:-right-6 md:-right-10 z-20 w-[155px] sm:w-[210px] h-[84px] sm:h-[118px] hover:rotate-0 transition-transform duration-300 drop-shadow-xl overflow-hidden rounded-xl bg-[#282828]"
               >
-                <div className="w-[280px] h-[152px] origin-top-left scale-[0.66] sm:scale-[0.78]">
+                <div className="w-[280px] h-[152px] origin-top-left scale-[0.55] sm:scale-[0.75]">
                   <iframe
                     data-testid="embed-iframe"
                     style={{ borderRadius: '12px' }}

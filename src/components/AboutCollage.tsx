@@ -39,7 +39,7 @@ export default function AboutCollage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
-          className="relative pb-6 border-b border-[#1A1615]/20 flex flex-col sm:flex-row sm:items-end justify-between gap-4"
+          className="relative pb-6 mb-8 border-b border-[#1A1615]/20 flex flex-col sm:flex-row sm:items-end justify-between gap-2 sm:gap-4"
         >
           <div>
             <span className="text-xs font-mono-custom font-bold uppercase tracking-widest text-[#C45B3A] block mb-1">
@@ -49,15 +49,15 @@ export default function AboutCollage() {
               Civrel Marlynette Fetalino
             </h2>
           </div>
-          <div className="text-left sm:text-right">
+          <div className="text-left sm:text-right pt-1 sm:pt-0">
             <span className="font-serif italic text-base sm:text-xl text-[#3D4A3E] block">
               Strategic Executive &amp; Creative Right Hand
             </span>
           </div>
         </motion.div>
 
-        {/* 2-Column Editorial Spread: Lanyard Hanging Directly from the Horizontal Line */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pt-0">
+        {/* 2-Column Editorial Spread */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start pt-0">
           
           {/* Left Column: Lanyard Hanging with Connected Lace and Scroll Bounce */}
           <motion.div
@@ -65,7 +65,7 @@ export default function AboutCollage() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-5 relative flex flex-col items-center select-none pointer-events-auto -mt-2 sm:-mt-2.5"
+            className="lg:col-span-5 relative flex flex-col items-center select-none pointer-events-auto -mt-8 sm:-mt-8"
           >
             {/* Minimalist Mount Ring on the Horizontal Line */}
             <div className="w-4 h-4 rounded-full bg-[#1A1615] border-2 border-[#F4EFE6] shadow-sm flex items-center justify-center z-30">
@@ -73,10 +73,10 @@ export default function AboutCollage() {
             </div>
 
             {/* Continuous Lace Strap Connector Fusing the Ring to 3D Lanyard */}
-            <div className="w-3.5 h-12 bg-[#1A1615] -mt-2 rounded-b-xs shadow-xs z-20 border-x border-stone-800"></div>
+            <div className="w-3.5 h-10 sm:h-12 bg-[#1A1615] -mt-2 rounded-b-xs shadow-xs z-20 border-x border-stone-800"></div>
 
-            {/* 3D Lanyard Canvas */}
-            <div className="w-full h-[360px] sm:h-[450px] -mt-10">
+            {/* 3D Lanyard Canvas (Compact on Mobile - Zero Empty Space) */}
+            <div className="w-full h-[260px] sm:h-[400px] -mt-8 sm:-mt-10">
               <Lanyard
                 position={[0, 0.4, 20]}
                 gravity={[0, -40, 0]}
@@ -97,7 +97,7 @@ export default function AboutCollage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="lg:col-span-7 space-y-6 pt-6 lg:pt-8"
+            className="lg:col-span-7 space-y-6 pt-0 lg:pt-4"
           >
             <p className="font-serif text-xl sm:text-2xl text-[#1A1615] leading-relaxed font-normal">
               I partner with founders, creative directors, and boutique agencies to transform operational friction into calm, automated clarity — reclaiming <span className="text-[#C45B3A] font-semibold underline decoration-1 underline-offset-4">15+ hours every week</span> for deep strategic vision.

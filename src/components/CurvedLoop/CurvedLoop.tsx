@@ -13,9 +13,9 @@ interface CurvedLoopProps {
 
 const CurvedLoop: React.FC<CurvedLoopProps> = ({
   marqueeText = '',
-  speed = 2,
+  speed = 2.5,
   className,
-  curveAmount = 55,
+  curveAmount = 45,
   direction = 'left',
   interactive = true
 }) => {
@@ -32,8 +32,8 @@ const CurvedLoop: React.FC<CurvedLoopProps> = ({
   const uid = useId().replace(/:/g, '');
   const pathId = `curve-${uid}`;
 
-  // Multi-wave undulating S-curve path across 2600px width
-  const pathD = `M -200 90 Q 300 ${90 - curveAmount} 800 90 T 1800 90 T 2800 90 T 3800 90`;
+  // Multi-wave undulating S-curve across 1400 viewBox
+  const pathD = `M -100 70 Q 250 ${70 - curveAmount} 600 70 T 1300 70 T 2000 70 T 2700 70`;
 
   const dragRef = useRef(false);
   const lastXRef = useRef(0);
@@ -42,7 +42,7 @@ const CurvedLoop: React.FC<CurvedLoopProps> = ({
 
   const textLength = spacing;
   const totalText = textLength
-    ? Array(Math.ceil(4000 / textLength) + 4)
+    ? Array(Math.ceil(3200 / textLength) + 3)
         .fill(text)
         .join('')
     : text;
@@ -127,7 +127,7 @@ const CurvedLoop: React.FC<CurvedLoopProps> = ({
       onPointerUp={endDrag}
       onPointerLeave={endDrag}
     >
-      <svg className="curved-loop-svg" viewBox="0 0 2400 180">
+      <svg className="curved-loop-svg" viewBox="0 0 1400 140">
         <text ref={measureRef} xmlSpace="preserve" style={{ visibility: 'hidden', opacity: 0, pointerEvents: 'none' }}>
           {text}
         </text>
@@ -135,7 +135,7 @@ const CurvedLoop: React.FC<CurvedLoopProps> = ({
           <path ref={pathRef} id={pathId} d={pathD} fill="none" stroke="transparent" />
         </defs>
         {ready && (
-          <text fontWeight="bold" xmlSpace="preserve" className={className}>
+          <text fontWeight="900" xmlSpace="preserve" className={className}>
             <textPath ref={textPathRef} href={`#${pathId}`} startOffset={offset + 'px'} xmlSpace="preserve">
               {totalText}
             </textPath>
