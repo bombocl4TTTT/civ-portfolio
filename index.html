@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="paper">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,14 +16,16 @@
 <body>
   <div class="page-wrapper">
 
-    <!-- Top Editorial Masthead & Live Status Bar -->
+    <!-- ==========================================================================
+         1. TOP EDITORIAL MASTHEAD & LIVE CLOCK
+         ========================================================================== -->
     <header class="editorial-masthead">
       <div class="masthead-left">
         <span>FOLIO // COMP CARD 2026</span>
         <span>&middot;</span>
         <div class="live-clock-pill">
           <span class="live-pulse-dot"></span>
-          <span id="live-manila-clock">MANILA: 03:40 AM UTC+8</span>
+          <span id="live-manila-clock">MANILA: 03:45 AM UTC+8</span>
         </div>
       </div>
 
@@ -32,17 +34,15 @@
       </div>
 
       <div class="masthead-right">
-        <!-- Interactive Theme Switcher -->
-        <div class="theme-switch-group" role="group" aria-label="Editorial View Palette">
-          <button class="theme-btn active" data-set-theme="paper" title="Editorial Matte Paper Base">Paper</button>
-          <button class="theme-btn" data-set-theme="blush" title="Vintage Blush Magazine Tint">Blush</button>
-          <button class="theme-btn" data-set-theme="dark" title="Darkroom Studio Mode">Darkroom</button>
+        <div class="status-badge">
+          <span class="status-badge-dot"></span>
+          <span>AVAILABLE FOR SELECT RETAINERS</span>
         </div>
       </div>
     </header>
 
     <!-- ==========================================================================
-         HERO COVER SPREAD (Avant-Garde Layered Art Direction)
+         2. HERO COVER SPREAD (Massive Layered Art Direction)
          ========================================================================== -->
     <section class="hero-spread">
 
@@ -70,7 +70,7 @@
             "Delivering high-precision executive administration, structured digital workflows, and seamless creative coordination for founders and studios worldwide."
           </p>
 
-          <!-- Interactive Secondary Studio Headshot Inset Card -->
+          <!-- Secondary Studio Headshot Inset Card -->
           <aside class="studio-headshot-card">
             <div class="headshot-frame-thumb">
               <img 
@@ -103,7 +103,7 @@
         <!-- Right Stage: Hero Full-Body Cutout Showcase with Interactive Hotspots -->
         <div class="hero-cutout-stage">
 
-          <!-- Architectural Editorial Plinth Backplate -->
+          <!-- Architectural Editorial Plinth Backplate (Vintage Blush) -->
           <div class="editorial-plinth-backplate">
             <div class="studio-crosshair tl"></div>
             <div class="studio-crosshair tr"></div>
@@ -163,7 +163,7 @@
     </section>
 
     <!-- ==========================================================================
-         INTERACTIVE COMP CARD DOSSIER (Tabbed Physical Card Experience)
+         3. AGENCY COMP CARD DOSSIER (Interactive Tabbed Specs)
          ========================================================================== -->
     <section id="comp-card-dossier" class="comp-card-section">
       <div class="comp-card-outer">
@@ -178,8 +178,8 @@
           <!-- Interactive Tab Nav -->
           <nav class="comp-tab-nav" role="tablist">
             <button class="tab-btn active" role="tab" aria-selected="true" data-tab="specs">General Specs</button>
-            <button class="tab-btn" role="tab" aria-selected="false" data-tab="toolstack">Toolstack Arsenal</button>
-            <button class="tab-btn" role="tab" aria-selected="false" data-tab="principles">Operating Principles</button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-tab="creative">Creative Telemetry</button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-tab="security">Security &amp; Protocols</button>
           </nav>
         </div>
 
@@ -216,99 +216,67 @@
             </div>
             <div class="spec-cell">
               <span class="spec-cell-label">Current Status</span>
-              <span class="spec-cell-value crimson">Accepting Engagements</span>
+              <span class="spec-cell-value crimson">Accepting Select Clients</span>
             </div>
           </div>
         </div>
 
-        <!-- Tab 2: Technical Toolstack Arsenal -->
-        <div id="tab-toolstack" class="comp-tab-pane" role="tabpanel">
-          <div class="toolstack-grid">
-            <div class="tool-chip">
-              <div class="tool-chip-name">
-                <span>Notion</span>
-                <span class="tool-chip-badge">HQ System</span>
-              </div>
-              <p class="tool-chip-role">Relational databases, client wikis, automated project dashboards, and team SOPs.</p>
+        <!-- Tab 2: Creative Telemetry -->
+        <div id="tab-creative" class="comp-tab-pane" role="tabpanel">
+          <div class="specs-matrix-grid">
+            <div class="spec-cell">
+              <span class="spec-cell-label">Asset Staging</span>
+              <span class="spec-cell-value">DSLR Raw &middot; Multi-Format Export</span>
             </div>
-
-            <div class="tool-chip">
-              <div class="tool-chip-name">
-                <span>Google Workspace</span>
-                <span class="tool-chip-badge">Suite</span>
-              </div>
-              <p class="tool-chip-role">Calendar gating, executive inbox governance, Sheets financial models, and Docs archive.</p>
+            <div class="spec-cell">
+              <span class="spec-cell-label">Design Tooling</span>
+              <span class="spec-cell-value">Figma &middot; Canva &middot; Lightroom</span>
             </div>
-
-            <div class="tool-chip">
-              <div class="tool-chip-name">
-                <span>Asana &amp; ClickUp</span>
-                <span class="tool-chip-badge">Projects</span>
-              </div>
-              <p class="tool-chip-role">Sprint milestones, dependencies, Gantt roadmap timelines, and contractor accountability.</p>
+            <div class="spec-cell">
+              <span class="spec-cell-label">Media Coordination</span>
+              <span class="spec-cell-value">Shoot Logistics &middot; Asset Taxonomies</span>
             </div>
-
-            <div class="tool-chip">
-              <div class="tool-chip-name">
-                <span>Slack &amp; Discord</span>
-                <span class="tool-chip-badge">Comms</span>
-              </div>
-              <p class="tool-chip-role">Channel architecture, asynchronous thread summaries, notification hygiene, and webhooks.</p>
+            <div class="spec-cell">
+              <span class="spec-cell-label">Content Sprints</span>
+              <span class="spec-cell-value">Multi-Channel Scheduling &amp; Review</span>
             </div>
-
-            <div class="tool-chip">
-              <div class="tool-chip-name">
-                <span>Figma &amp; Canva</span>
-                <span class="tool-chip-badge">Design</span>
-              </div>
-              <p class="tool-chip-role">Design asset preparation, slide deck polish, social media graphics, and brand asset curation.</p>
+            <div class="spec-cell">
+              <span class="spec-cell-label">Deck Presentation</span>
+              <span class="spec-cell-value">High-Stakes Keynote &amp; Pitch Polish</span>
             </div>
-
-            <div class="tool-chip">
-              <div class="tool-chip-name">
-                <span>Zapier &amp; Make</span>
-                <span class="tool-chip-badge">Automation</span>
-              </div>
-              <p class="tool-chip-role">Automating cross-platform data flows, lead routing, and recurring administrative triggers.</p>
+            <div class="spec-cell">
+              <span class="spec-cell-label">Video Handovers</span>
+              <span class="spec-cell-value">Loom Walkthroughs &amp; SOP Demos</span>
             </div>
-
-            <div class="tool-chip">
-              <div class="tool-chip-name">
-                <span>Loom &amp; Miro</span>
-                <span class="tool-chip-badge">Async</span>
-              </div>
-              <p class="tool-chip-role">Asynchronous video handovers, process mapping, visual brainstorm canvases, and team training.</p>
+            <div class="spec-cell">
+              <span class="spec-cell-label">Brand Guidelines</span>
+              <span class="spec-cell-value">Strict Typographic &amp; Visual Audit</span>
             </div>
-
-            <div class="tool-chip">
-              <div class="tool-chip-name">
-                <span>Airtable</span>
-                <span class="tool-chip-badge">Data</span>
-              </div>
-              <p class="tool-chip-role">CRM management, content calendar pipelines, inventory tracking, and client rosters.</p>
+            <div class="spec-cell">
+              <span class="spec-cell-label">Quality Assurance</span>
+              <span class="spec-cell-value crimson">Zero-Defect Asset Verification</span>
             </div>
           </div>
         </div>
 
-        <!-- Tab 3: Operating Principles -->
-        <div id="tab-principles" class="comp-tab-pane" role="tabpanel">
-          <div class="principles-grid">
-            <div class="principle-box">
-              <div class="principle-num">01 // DISCRETION</div>
-              <h3 class="principle-title">Absolute Confidentiality</h3>
-              <p class="principle-desc">Managing proprietary company data, high-profile communications, and executive schedules with strict NDA compliance.</p>
+        <!-- Tab 3: Security & Protocols -->
+        <div id="tab-security" class="comp-tab-pane" role="tabpanel">
+          <div class="specs-matrix-grid">
+            <div class="spec-cell">
+              <span class="spec-cell-label">NDA Compliance</span>
+              <span class="spec-cell-value">Strict Confidentiality Standard</span>
             </div>
-
-            <div class="principle-box">
-              <div class="principle-num">02 // ASYNCHRONOUS</div>
-              <h3 class="principle-title">Async-First Momentum</h3>
-              <p class="principle-desc">Documenting decisions clearly with context and actionable summaries so projects move forward across global timezones without meetings.</p>
+            <div class="spec-cell">
+              <span class="spec-cell-label">Password Governance</span>
+              <span class="spec-cell-value">1Password &middot; Bitwarden Vaults</span>
             </div>
-
-            <div class="principle-box">
-              <div class="principle-num">03 // PROACTIVE</div>
-              <h3 class="principle-title">Predictive Execution</h3>
-              <p class="principle-desc">Anticipating scheduling conflicts, creative bottlenecks, and operational friction before they reach the executive desk.</p>
+            <div class="spec-cell">
+              <span class="spec-cell-label">Access Permissions</span>
+              <span class="spec-cell-value">Least-Privilege Principle</span>
+            </div>
+            <div class="spec-cell">
+              <span class="spec-cell-label">Data Retention</span>
+              <span class="spec-cell-value">Encrypted Cloud Workspaces</span>
             </div>
           </div>
         </div>
@@ -317,115 +285,312 @@
     </section>
 
     <!-- ==========================================================================
-         INTERACTIVE OPERATIONS LOOKBOOK (Case Studies)
+         4. OPERATIONAL PHILOSOPHY (Haute-Editorial Pillar Cards)
          ========================================================================== -->
-    <section class="lookbook-section">
-      <div class="lookbook-header">
-        <h2 class="lookbook-title">
-          <span style="font-size: 0.8rem; font-weight: 800; color: var(--accent-crimson);">02</span>
-          Operational Scope &amp; Deliverables
+    <section class="philosophy-section">
+      <div class="section-head-bar">
+        <h2 class="section-head-title">
+          <span class="num">01</span>
+          Operational Philosophy &amp; Standards
         </h2>
-        <span style="font-size: 0.72rem; letter-spacing: 0.16em; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">
-          SELECT A CAPABILITY TO PREVIEW
-        </span>
+        <span class="section-head-submeta">CORE PILLARS</span>
       </div>
 
-      <div class="lookbook-grid">
-        
-        <!-- Interactive Case Menu -->
-        <div class="lookbook-menu" role="tablist">
-          <button class="lookbook-menu-item active" data-case="calendar">
-            <div class="item-left">
-              <span class="item-index">CASE 01</span>
-              <span class="item-heading">Executive Calendar &amp; Gatekeeping</span>
-            </div>
-            <span class="item-arrow">&rarr;</span>
-          </button>
-
-          <button class="lookbook-menu-item" data-case="creative">
-            <div class="item-left">
-              <span class="item-index">CASE 02</span>
-              <span class="item-heading">Creative Production &amp; Asset Staging</span>
-            </div>
-            <span class="item-arrow">&rarr;</span>
-          </button>
-
-          <button class="lookbook-menu-item" data-case="systems">
-            <div class="item-left">
-              <span class="item-index">CASE 03</span>
-              <span class="item-heading">Notion Digital HQ &amp; SOP Architecture</span>
-            </div>
-            <span class="item-arrow">&rarr;</span>
-          </button>
-
-          <button class="lookbook-menu-item" data-case="stakeholder">
-            <div class="item-left">
-              <span class="item-index">CASE 04</span>
-              <span class="item-heading">High-Touch Stakeholder Relations</span>
-            </div>
-            <span class="item-arrow">&rarr;</span>
-          </button>
-        </div>
-
-        <!-- Dynamic Lookbook Showcase Box -->
-        <div class="lookbook-showcase-box" id="showcase-display">
-          <div class="showcase-kicker" id="showcase-kicker">DELIVERABLE ARCHITECTURE // CASE 01</div>
-          <h3 class="showcase-title" id="showcase-title">Executive Calendar Architecture &amp; Travel Logistics</h3>
-          <p class="showcase-body" id="showcase-body">
-            Transforming chaotic schedules into intentional, deep-work friendly agendas. Full ownership of calendar booking rules, multi-city travel itineraries, executive time-blocking, and meeting brief preparations.
+      <div class="pillars-grid">
+        <article class="pillar-card">
+          <div class="pillar-card-num">01.1 // ASYNC</div>
+          <h3 class="pillar-card-title">Asynchronous Sovereignty</h3>
+          <p class="pillar-card-desc">
+            Documenting decisions clearly with actionable context so company projects maintain 24-hour momentum across timezones without unnecessary meetings.
           </p>
-          <div class="showcase-deliverables-title">Standard Deliverables:</div>
-          <div class="deliverable-tags" id="showcase-tags">
-            <span class="deliverable-tag">Calendar Time-Blocking</span>
-            <span class="deliverable-tag">Multi-Leg Flight &amp; Hotel Logistics</span>
-            <span class="deliverable-tag">Executive Briefing Dossiers</span>
-            <span class="deliverable-tag">Inbox Zero Protocols</span>
-          </div>
-        </div>
+        </article>
 
+        <article class="pillar-card">
+          <div class="pillar-card-num">01.2 // DISCRETION</div>
+          <h3 class="pillar-card-title">Relentless Discretion</h3>
+          <p class="pillar-card-desc">
+            Protecting sensitive company data, high-profile communications, and executive schedules with institutional-grade privacy and strict NDA adherence.
+          </p>
+        </article>
+
+        <article class="pillar-card">
+          <div class="pillar-card-num">01.3 // PRECISION</div>
+          <h3 class="pillar-card-title">Creative Precision</h3>
+          <p class="pillar-card-desc">
+            Balancing meticulous administrative organization with an acute creative eye, ensuring every slide deck, document, and asset reflects brand excellence.
+          </p>
+        </article>
+
+        <article class="pillar-card">
+          <div class="pillar-card-num">01.4 // PROACTIVE</div>
+          <h3 class="pillar-card-title">Predictive Execution</h3>
+          <p class="pillar-card-desc">
+            Anticipating schedule collisions, contractor delays, and workflow friction before they reach the executive desk, neutralizing issues proactively.
+          </p>
+        </article>
       </div>
     </section>
 
     <!-- ==========================================================================
-         GLOBAL TIMEZONE OVERLAP MATRIX
+         5. DAY IN THE LIFE: ASYNCHRONOUS WORKFLOW TIMELINE
+         ========================================================================== -->
+    <section class="timeline-section">
+      <div class="section-head-bar">
+        <h2 class="section-head-title">
+          <span class="num">02</span>
+          Day in the Life // 24-Hour Workflow Rhythm
+        </h2>
+        <span class="section-head-submeta">OPERATIONAL CADENCE</span>
+      </div>
+
+      <div class="timeline-docket">
+        <div class="timeline-step">
+          <span class="timeline-time-badge">08:00 UTC+8</span>
+          <h3 class="timeline-step-title">Morning Triage</h3>
+          <p class="timeline-step-desc">Inbox zero review, executive calendar verification, and daily priority brief compilation.</p>
+        </div>
+
+        <div class="timeline-step">
+          <span class="timeline-time-badge">11:00 UTC+8</span>
+          <h3 class="timeline-step-title">Deep Architecture</h3>
+          <p class="timeline-step-desc">Notion database maintenance, SOP updates, and executive deep-work block shielding.</p>
+        </div>
+
+        <div class="timeline-step">
+          <span class="timeline-time-badge">14:00 UTC+8</span>
+          <h3 class="timeline-step-title">Creative Pipeline</h3>
+          <p class="timeline-step-desc">Visual asset staging, contractor sprint check-ins, and Figma deliverable reviews.</p>
+        </div>
+
+        <div class="timeline-step">
+          <span class="timeline-time-badge">17:00 UTC+8</span>
+          <h3 class="timeline-step-title">Global Overlap</h3>
+          <p class="timeline-step-desc">Live sync window with US West Coast &amp; European teams; async video handovers.</p>
+        </div>
+
+        <div class="timeline-step">
+          <span class="timeline-time-badge">20:00 UTC+8</span>
+          <h3 class="timeline-step-title">Evening Digest</h3>
+          <p class="timeline-step-desc">Asynchronous summary dispatch, next-day calendar staging, and security sweep.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. INTERACTIVE TOOLSTACK ARSENAL (Filterable)
+         ========================================================================== -->
+    <section class="toolstack-section">
+      <div class="section-head-bar">
+        <h2 class="section-head-title">
+          <span class="num">03</span>
+          Digital Systems &amp; Toolstack Arsenal
+        </h2>
+        <span class="section-head-submeta">CURATED ECOSYSTEM</span>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="tool-filter-nav" role="tablist">
+        <button class="tool-filter-btn active" data-filter="all">All Systems (8)</button>
+        <button class="tool-filter-btn" data-filter="executive">Executive &amp; Comms</button>
+        <button class="tool-filter-btn" data-filter="projects">Project Engines</button>
+        <button class="tool-filter-btn" data-filter="creative">Creative &amp; Automation</button>
+      </div>
+
+      <div class="toolstack-arsenal-grid" id="arsenal-container">
+        <div class="arsenal-card" data-cat="executive">
+          <div class="arsenal-card-head">
+            <span class="arsenal-card-name">Notion</span>
+            <span class="arsenal-card-tag">HQ System</span>
+          </div>
+          <p class="arsenal-card-desc">Relational databases, client wikis, automated project dashboards, and team SOP repositories.</p>
+        </div>
+
+        <div class="arsenal-card" data-cat="executive">
+          <div class="arsenal-card-head">
+            <span class="arsenal-card-name">Google Workspace</span>
+            <span class="arsenal-card-tag">Executive Suite</span>
+          </div>
+          <p class="arsenal-card-desc">Calendar gating, executive inbox governance, Sheets financial models, and Docs archive.</p>
+        </div>
+
+        <div class="arsenal-card" data-cat="projects">
+          <div class="arsenal-card-head">
+            <span class="arsenal-card-name">Asana &amp; ClickUp</span>
+            <span class="arsenal-card-tag">Project Engines</span>
+          </div>
+          <p class="arsenal-card-desc">Sprint milestones, dependencies, Gantt roadmap timelines, and contractor accountability.</p>
+        </div>
+
+        <div class="arsenal-card" data-cat="executive">
+          <div class="arsenal-card-head">
+            <span class="arsenal-card-name">Slack &amp; Discord</span>
+            <span class="arsenal-card-tag">Comms Hub</span>
+          </div>
+          <p class="arsenal-card-desc">Channel architecture, asynchronous thread summaries, notification hygiene, and webhooks.</p>
+        </div>
+
+        <div class="arsenal-card" data-cat="creative">
+          <div class="arsenal-card-head">
+            <span class="arsenal-card-name">Figma &amp; Canva</span>
+            <span class="arsenal-card-tag">Design Pipeline</span>
+          </div>
+          <p class="arsenal-card-desc">Design asset preparation, slide deck polish, social media graphics, and brand asset curation.</p>
+        </div>
+
+        <div class="arsenal-card" data-cat="creative">
+          <div class="arsenal-card-head">
+            <span class="arsenal-card-name">Zapier &amp; Make</span>
+            <span class="arsenal-card-tag">Automations</span>
+          </div>
+          <p class="arsenal-card-desc">Automating cross-platform data flows, lead routing, and recurring administrative triggers.</p>
+        </div>
+
+        <div class="arsenal-card" data-cat="creative">
+          <div class="arsenal-card-head">
+            <span class="arsenal-card-name">Loom &amp; Miro</span>
+            <span class="arsenal-card-tag">Async Video</span>
+          </div>
+          <p class="arsenal-card-desc">Asynchronous video handovers, process mapping, visual brainstorm canvases, and team training.</p>
+        </div>
+
+        <div class="arsenal-card" data-cat="projects">
+          <div class="arsenal-card-head">
+            <span class="arsenal-card-name">Airtable</span>
+            <span class="arsenal-card-tag">Relational CRM</span>
+          </div>
+          <p class="arsenal-card-desc">CRM management, content calendar pipelines, inventory tracking, and client rosters.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. RETAINER & ENGAGEMENT SCOPE SELECTOR
+         ========================================================================== -->
+    <section class="retainer-section">
+      <div class="section-head-bar">
+        <h2 class="section-head-title">
+          <span class="num">04</span>
+          Engagement Scopes &amp; Retainer Tiers
+        </h2>
+        <span class="section-head-submeta">ENGAGEMENT MODELS</span>
+      </div>
+
+      <div class="retainer-grid">
+        <div class="retainer-card featured">
+          <div>
+            <div class="retainer-card-badge">RECOMMENDED // FULL OWNERSHIP</div>
+            <h3 class="retainer-card-title">Dedicated Executive Partner</h3>
+            <p class="retainer-card-desc">Comprehensive administrative, scheduling, and operational ownership for founders and executives.</p>
+            <ul class="retainer-features-list">
+              <li>Full Calendar &amp; Travel Architecture</li>
+              <li>Inbox Zero Governance</li>
+              <li>Daily Asynchronous Briefing</li>
+              <li>High-Touch Stakeholder Gatekeeping</li>
+            </ul>
+          </div>
+          <a href="#inquiry-console" class="btn-retainer-select">
+            <span>Inquire Retainer</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+
+        <div class="retainer-card">
+          <div>
+            <div class="retainer-card-badge">CREATIVE OPERATIONS</div>
+            <h3 class="retainer-card-title">Creative Project Manager</h3>
+            <p class="retainer-card-desc">Managing multi-channel creative production pipelines, designer sprints, and asset libraries.</p>
+            <ul class="retainer-features-list">
+              <li>Production Timeline Tracking</li>
+              <li>DSLR &amp; Design Asset Staging</li>
+              <li>Contractor Sprint Management</li>
+              <li>Brand Guideline QA Auditing</li>
+            </ul>
+          </div>
+          <a href="#inquiry-console" class="btn-retainer-select">
+            <span>Inquire Scope</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+
+        <div class="retainer-card">
+          <div>
+            <div class="retainer-card-badge">SYSTEMS BUILD</div>
+            <h3 class="retainer-card-title">Notion &amp; Ops Architecture</h3>
+            <p class="retainer-card-desc">Turnkey digital headquarters setup, relational databases, team SOPs, and Zapier automations.</p>
+            <ul class="retainer-features-list">
+              <li>Custom Notion Workspace Setup</li>
+              <li>Centralized SOP &amp; Wiki Library</li>
+              <li>Automated Zapier Webhooks</li>
+              <li>Team Onboarding Video Demos</li>
+            </ul>
+          </div>
+          <a href="#inquiry-console" class="btn-retainer-select">
+            <span>Inquire Build</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+
+        <div class="retainer-card">
+          <div>
+            <div class="retainer-card-badge">FOCUSED SPRINT</div>
+            <h3 class="retainer-card-title">VIP Special Project Sprint</h3>
+            <p class="retainer-card-desc">Rapid 2-4 week dedicated sprint for product launches, event logistics, or major operational overhauls.</p>
+            <ul class="retainer-features-list">
+              <li>Launch Schedule Orchestration</li>
+              <li>Vendor &amp; Venue Coordination</li>
+              <li>Slide Deck &amp; Media Polish</li>
+              <li>24/7 Priority Availability</li>
+            </ul>
+          </div>
+          <a href="#inquiry-console" class="btn-retainer-select">
+            <span>Inquire Sprint</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. GLOBAL TIMEZONE OVERLAP MATRIX
          ========================================================================== -->
     <section class="timezone-matrix-card">
-      <div class="tz-header">
-        <h3>Global Availability &amp; Live Timezones</h3>
-        <span style="font-size: 0.72rem; letter-spacing: 0.14em; font-weight: 700; text-transform: uppercase; color: var(--accent-crimson);">
-          OPTIMIZED FOR GLOBAL COLLABORATION
-        </span>
+      <div class="section-head-bar" style="margin-bottom: 1.5rem;">
+        <h2 class="section-head-title" style="font-size: 1.35rem;">
+          <span class="num">05</span>
+          Global Availability &amp; Live Timezones
+        </h2>
+        <span class="section-head-submeta">GLOBAL OVERLAP</span>
       </div>
 
       <div class="tz-grid">
         <div class="tz-col active-base">
           <span class="tz-city">Manila (Base HQ)</span>
-          <span class="tz-time" id="tz-manila">03:40 AM</span>
+          <span class="tz-time" id="tz-manila">03:45 AM</span>
           <span class="tz-overlap-status">Primary Base (UTC+8)</span>
         </div>
 
         <div class="tz-col">
           <span class="tz-city">New York (EST)</span>
-          <span class="tz-time" id="tz-ny">03:40 PM</span>
+          <span class="tz-time" id="tz-ny">03:45 PM</span>
           <span class="tz-overlap-status">Evening / Morning Overlap</span>
         </div>
 
         <div class="tz-col">
           <span class="tz-city">London (GMT)</span>
-          <span class="tz-time" id="tz-lon">08:40 PM</span>
+          <span class="tz-time" id="tz-lon">08:45 PM</span>
           <span class="tz-overlap-status">Afternoon Overlap</span>
         </div>
 
         <div class="tz-col">
           <span class="tz-city">Sydney (AEST)</span>
-          <span class="tz-time" id="tz-syd">05:40 AM</span>
-          <span class="tz-overlap-status">Full Direct Business Hours</span>
+          <span class="tz-time" id="tz-syd">05:45 AM</span>
+          <span class="tz-overlap-status">Direct Business Hours</span>
         </div>
       </div>
     </section>
 
     <!-- ==========================================================================
-         HIGH-CONTRAST INQUIRY & ENGAGEMENT CONSOLE
+         9. HIGH-CONTRAST INQUIRY & ENGAGEMENT CONSOLE
          ========================================================================== -->
     <section id="inquiry-console" class="inquiry-console-section">
       <div class="console-grid">
@@ -473,7 +638,9 @@
       </div>
     </section>
 
-    <!-- Page Footer Colophon -->
+    <!-- ==========================================================================
+         10. FOOTER COLOPHON
+         ========================================================================== -->
     <footer class="page-colophon">
       <div class="colophon-author">
         &copy; 2026 Civrel Marlynette Fetalino &middot; All Rights Reserved
@@ -486,7 +653,7 @@
   </div>
 
   <!-- ==========================================================================
-       VANILLA JS: Live Clocks, Tab Switching, Lookbook Selector, Theme Toggles
+       VANILLA JS: Live Clocks, Tab Switching, Toolstack Filter, Copy Feedback
        ========================================================================== -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -524,18 +691,7 @@
       updateClocks();
       setInterval(updateClocks, 1000);
 
-      // 2. Theme Switcher
-      const themeButtons = document.querySelectorAll('[data-set-theme]');
-      themeButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const targetTheme = btn.getAttribute('data-set-theme');
-          document.documentElement.setAttribute('data-theme', targetTheme);
-          themeButtons.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-        });
-      });
-
-      // 3. Tab Switching in Comp Card Dossier
+      // 2. Tab Switching in Comp Card Dossier
       const tabButtons = document.querySelectorAll('.tab-btn');
       const tabPanes = document.querySelectorAll('.comp-tab-pane');
 
@@ -556,58 +712,28 @@
         });
       });
 
-      // 4. Interactive Lookbook Showcase Selector
-      const caseData = {
-        calendar: {
-          kicker: "DELIVERABLE ARCHITECTURE // CASE 01",
-          title: "Executive Calendar Architecture & Travel Logistics",
-          body: "Transforming chaotic schedules into intentional, deep-work friendly agendas. Full ownership of calendar booking rules, multi-city travel itineraries, executive time-blocking, and meeting brief preparations.",
-          tags: ["Calendar Time-Blocking", "Multi-Leg Flight & Hotel Logistics", "Executive Briefing Dossiers", "Inbox Zero Protocols"]
-        },
-        creative: {
-          kicker: "DELIVERABLE ARCHITECTURE // CASE 02",
-          title: "Creative Production & Visual Asset Staging",
-          body: "Managing end-to-end creative workflows from initial shoot coordination to final multi-platform asset delivery. Structuring design handovers, photo library taxonomies, and contractor sprints.",
-          tags: ["DSLR & Camera Asset Prep", "Figma Design System Handoffs", "Contractor Sprint Tracking", "Multi-Format Asset Export"]
-        },
-        systems: {
-          kicker: "DELIVERABLE ARCHITECTURE // CASE 03",
-          title: "Notion Digital HQ & Automated SOP Architecture",
-          body: "Building frictionless internal knowledge hubs and centralized company operating systems. Creating linked databases, custom dashboards, client portals, and automated Zapier/Make webhooks.",
-          tags: ["Relational Notion Databases", "Team SOP Knowledge Base", "Zapier Workflow Automation", "Client Onboarding Portals"]
-        },
-        stakeholder: {
-          kicker: "DELIVERABLE ARCHITECTURE // CASE 04",
-          title: "High-Touch Stakeholder Relations & Comms",
-          body: "Maintaining executive representation with diplomacy and precision. Filtering incoming partner requests, coordinating VIP client follow-ups, and managing asynchronous board updates.",
-          tags: ["VIP Inbound Screening", "Asynchronous Meeting Minutes", "Client Check-in Workflows", "Strict NDA Confidentiality"]
-        }
-      };
+      // 3. Toolstack Filter
+      const filterBtns = document.querySelectorAll('.tool-filter-btn');
+      const arsenalCards = document.querySelectorAll('.arsenal-card');
 
-      const lookbookItems = document.querySelectorAll('.lookbook-menu-item');
-      const showcaseKicker = document.getElementById('showcase-kicker');
-      const showcaseTitle = document.getElementById('showcase-title');
-      const showcaseBody = document.getElementById('showcase-body');
-      const showcaseTags = document.getElementById('showcase-tags');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
 
-      lookbookItems.forEach(item => {
-        item.addEventListener('click', () => {
-          const caseKey = item.getAttribute('data-case');
-          const data = caseData[caseKey];
-
-          if (data) {
-            lookbookItems.forEach(i => i.classList.remove('active'));
-            item.classList.add('active');
-
-            showcaseKicker.textContent = data.kicker;
-            showcaseTitle.textContent = data.title;
-            showcaseBody.textContent = data.body;
-            showcaseTags.innerHTML = data.tags.map(t => `<span class="deliverable-tag">${t}</span>`).join('');
-          }
+          arsenalCards.forEach(card => {
+            const cat = card.getAttribute('data-cat');
+            if (filter === 'all' || cat === filter) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
         });
       });
 
-      // 5. One-Click Copy Email
+      // 4. One-Click Copy Email
       const copyBtn = document.getElementById('copy-email-btn');
       const emailAddress = document.getElementById('email-address');
 
