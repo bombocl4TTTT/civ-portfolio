@@ -128,9 +128,9 @@ export default function AboutCollage() {
 
         </div>
 
-        {/* Full-Width Wavy Curved Loop Marquee (Raised Higher - Zero Empty Gap) */}
-        <div className="w-screen relative left-1/2 -translate-x-1/2 mt-4 pt-4 border-t border-[#1A1615]/15 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-1 flex items-center justify-between">
+        {/* Full-Width Wavy Curved Loop Marquee */}
+        <div className="w-screen relative left-1/2 -translate-x-1/2 mt-6 pt-4 pb-2 border-t border-[#1A1615]/15 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4 flex items-center justify-between">
             <span className="text-[10px] sm:text-xs font-mono-custom font-bold text-[#756D63] uppercase tracking-widest">
               CORE TOOL STACK &amp; SYSTEMS ARCHITECTURE
             </span>
@@ -138,11 +138,11 @@ export default function AboutCollage() {
               ✦ INTERACTIVE MARQUEE (DRAG TO SCROLL)
             </span>
           </div>
-          <div className="w-full py-1">
+          <div className="w-full py-2">
             <CurvedLoop
               marqueeText="NOTION • ASANA • FIGMA • SLACK • ZAPIER • GOOGLE WORKSPACE • SHOPIFY • KLAVIYO • "
               speed={2.2}
-              curveAmount={55}
+              curveAmount={35}
               direction="left"
               interactive={true}
               className="font-mono-custom font-black tracking-widest fill-[#1A1615] hover:fill-[#C45B3A] transition-colors"

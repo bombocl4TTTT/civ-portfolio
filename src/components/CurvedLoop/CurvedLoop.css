@@ -12,7 +12,7 @@
   width: 100%;
   overflow: visible;
   display: block;
-  font-size: 68px;
+  font-size: 60px;
   fill: #1A1615;
   user-select: none;
   -moz-user-select: none;
@@ -25,7 +25,7 @@
 
 @media (max-width: 768px) {
   .curved-loop-svg {
-    font-size: 78px;
+    font-size: 66px;
     letter-spacing: 0.05em;
   }
 }

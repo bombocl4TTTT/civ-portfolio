@@ -15,7 +15,7 @@ const CurvedLoop: React.FC<CurvedLoopProps> = ({
   marqueeText = '',
   speed = 2.5,
   className,
-  curveAmount = 45,
+  curveAmount = 35,
   direction = 'left',
   interactive = true
 }) => {
@@ -32,8 +32,8 @@ const CurvedLoop: React.FC<CurvedLoopProps> = ({
   const uid = useId().replace(/:/g, '');
   const pathId = `curve-${uid}`;
 
-  // Multi-wave undulating S-curve across 1400 viewBox
-  const pathD = `M -100 70 Q 250 ${70 - curveAmount} 600 70 T 1300 70 T 2000 70 T 2700 70`;
+  // Multi-wave undulating S-curve lowered comfortably with ample headroom
+  const pathD = `M -100 100 Q 250 ${100 - curveAmount} 600 100 T 1300 100 T 2000 100 T 2700 100`;
 
   const dragRef = useRef(false);
   const lastXRef = useRef(0);
@@ -127,7 +127,7 @@ const CurvedLoop: React.FC<CurvedLoopProps> = ({
       onPointerUp={endDrag}
       onPointerLeave={endDrag}
     >
-      <svg className="curved-loop-svg" viewBox="0 0 1400 140">
+      <svg className="curved-loop-svg" viewBox="0 0 1400 170">
         <text ref={measureRef} xmlSpace="preserve" style={{ visibility: 'hidden', opacity: 0, pointerEvents: 'none' }}>
           {text}
         </text>
