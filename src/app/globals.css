@@ -25,15 +25,19 @@ body {
   background-size: 24px 24px;
 }
 
-/* Typography Helpers - Fun, Upright Graphic Artist Handwriting (Patrick Hand) */
+/* Headers & Titles - Shantell Sans (Upright Fun Comic / Graphic Style) */
 .font-playfair,
 .font-heading,
 .font-title,
+.font-shantell {
+  font-family: var(--font-shantell), var(--font-patrick), cursive, sans-serif;
+}
+
+/* Handwriting Accents, Quotes, Notes & Manifesto - Patrick Hand */
 .font-handwriting,
 .font-fun,
 .font-artist,
-.font-shantell,
-.font-serif {
+.font-casual {
   font-family: var(--font-patrick), cursive, sans-serif;
 }
 
