@@ -25,25 +25,20 @@ body {
   background-size: 24px 24px;
 }
 
-/* Typography Helpers - Fun, Upright Graphic Artist Handwriting */
+/* Typography Helpers - Fun, Upright Graphic Artist Handwriting (Patrick Hand) */
 .font-playfair,
 .font-heading,
-.font-title {
-  font-family: var(--font-shantell), var(--font-patrick), cursive, sans-serif;
+.font-title,
+.font-handwriting,
+.font-fun,
+.font-artist,
+.font-shantell,
+.font-serif {
+  font-family: var(--font-patrick), cursive, sans-serif;
 }
 
 .font-mono-custom {
   font-family: var(--font-mono), monospace;
-}
-
-.font-handwriting,
-.font-fun,
-.font-artist {
-  font-family: var(--font-patrick), var(--font-shantell), cursive, sans-serif;
-}
-
-.font-shantell {
-  font-family: var(--font-shantell), cursive, sans-serif;
 }
 
 /* Paper & Collage Utilities */

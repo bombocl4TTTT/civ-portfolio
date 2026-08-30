@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
-import { Shantell_Sans, Patrick_Hand, Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
+import { Patrick_Hand, Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
 import "./globals.css";
-
-const shantell = Shantell_Sans({
-  subsets: ["latin"],
-  variable: "--font-shantell",
-  display: "swap",
-});
 
 const patrickHand = Patrick_Hand({
   subsets: ["latin"],
@@ -48,7 +42,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${shantell.variable} ${patrickHand.variable} ${jakarta.variable} ${spaceMono.variable} scroll-smooth`}
+      className={`${patrickHand.variable} ${jakarta.variable} ${spaceMono.variable} scroll-smooth`}
     >
       <body className="min-h-screen bg-[#FBF8F3] text-[#1A1615] font-sans antialiased selection:bg-[#C45B3A] selection:text-[#FFFFFF] overflow-x-hidden">
         {children}
