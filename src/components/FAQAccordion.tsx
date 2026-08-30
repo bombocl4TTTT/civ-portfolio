@@ -51,8 +51,8 @@ export default function FAQAccordion() {
           <h2 className="font-playfair text-3xl sm:text-5xl font-black text-[#1A1615] tracking-tight">
             Clarity &amp; Logistics.
           </h2>
-          <span className="font-handwriting text-xl text-[#C45B3A] font-bold block mt-1">
-            ✦ everything you need to know 💬
+          <span className="font-handwriting text-lg sm:text-xl text-[#C45B3A] font-bold block mt-1">
+            ✦ everything you need to know
           </span>
         </motion.div>
 

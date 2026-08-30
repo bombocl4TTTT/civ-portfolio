@@ -94,7 +94,7 @@ export default function AboutCollage() {
               <div className="flex items-center gap-1 absolute bottom-2 right-2 sm:bottom-4 sm:right-4 z-20 transform rotate-3 sm:rotate-6 pointer-events-none bg-[#FBF8F3]/90 sm:bg-transparent px-2 py-0.5 rounded shadow-xs sm:shadow-none border border-[#E5DCD2] sm:border-0">
                 <DoodleCurvedArrow width={24} height={16} color="#C45B3A" flipX />
                 <span className="font-handwriting text-sm sm:text-base text-[#C45B3A] font-bold">
-                  grab &amp; swing me! 🏷️
+                  grab &amp; swing me!
                 </span>
               </div>
             </div>

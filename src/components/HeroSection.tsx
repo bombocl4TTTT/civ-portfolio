@@ -186,7 +186,7 @@ export default function HeroSection() {
               {/* Cute Handwritten Label + Arrow for Spotify Player (Visible on Mobile & Desktop) */}
               <div className="flex items-center gap-1 absolute -top-5 right-2 sm:top-[28%] sm:-right-10 z-30 transform rotate-3 sm:rotate-6 pointer-events-none bg-[#FBF8F3]/90 sm:bg-transparent px-2 py-0.5 rounded shadow-xs sm:shadow-none border border-[#E5DCD2] sm:border-0">
                 <span className="font-handwriting text-base sm:text-xl text-[#C45B3A] font-bold">
-                  on repeat 🎧
+                  on repeat
                 </span>
                 <DoodleCurvedArrow width={24} height={18} color="#C45B3A" />
               </div>
@@ -217,7 +217,7 @@ export default function HeroSection() {
                   {/* Handwritten Mini Annotation (Visible on Mobile & Desktop) */}
                   <div className="absolute -bottom-5 left-0 transform -rotate-6 pointer-events-none whitespace-nowrap bg-[#FBF8F3]/90 sm:bg-transparent px-1.5 py-0.5 rounded shadow-xs sm:shadow-none border border-[#E5DCD2] sm:border-0">
                     <span className="font-handwriting text-sm sm:text-base text-[#1A1615] font-bold">
-                      systems + clarity ✨
+                      systems + clarity
                     </span>
                   </div>
                 </div>
