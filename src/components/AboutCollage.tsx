@@ -108,7 +108,7 @@ export default function AboutCollage() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="lg:col-span-7 space-y-6 pt-0 lg:pt-4"
           >
-            <p className="font-shantell text-lg sm:text-2xl text-[#1A1615] leading-relaxed font-bold">
+            <p className="font-handwriting text-xl sm:text-3xl text-[#1A1615] leading-relaxed font-bold">
               I partner with founders, creative directors, and boutique agencies to transform operational friction into calm, automated clarity — reclaiming <span className="text-[#C45B3A] underline decoration-2 underline-offset-4">15+ hours every week</span> for deep strategic vision.
             </p>
 
