@@ -62,14 +62,6 @@ export default function HeroSection() {
 
             {/* Desktop Only: Value Proposition, Capabilities & CTAs */}
             <div className="hidden lg:flex flex-col space-y-6">
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-                className="text-sm sm:text-base text-[#524B43] leading-relaxed max-w-xl font-medium"
-              >
-                I partner with high-growth founders, creative directors, and boutique agencies as a strategic right hand. From high-stakes calendar mastery and automated Notion workspaces to creative content production and product launches.
-              </motion.p>
 
               {/* Quick Capability Tags */}
               <motion.div
@@ -236,9 +228,6 @@ export default function HeroSection() {
 
           {/* Section 3: Mobile-Only Value Proposition, Capabilities & CTAs (Directly Following Image) */}
           <div className="lg:hidden flex flex-col space-y-6 w-full order-3 pt-2">
-            <p className="text-sm text-[#524B43] leading-relaxed">
-              I partner with high-growth founders, creative directors, and boutique agencies as a strategic right hand. From high-stakes calendar mastery and automated Notion workspaces to creative content production and product launches.
-            </p>
 
             {/* Quick Capability Tags */}
             <div className="grid grid-cols-2 gap-2">
